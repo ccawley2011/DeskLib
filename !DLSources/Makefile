@@ -48,8 +48,8 @@ ifeq (gcc, $(COMPILER))
   CC = $(PREFIX)gcc
   CFLAGS = -mthrowback -O3 $(WARNINGS) -mpoke-function-name -mlibscl
 
-  AS = $(PREFIX)gcc
-  ASFLAGS = -Wa,-ILibraries,-I$(@D) -mthrowback -mlibscl -c
+  AS = $(PREFIX)asasm
+  ASFLAGS = -ILibraries -I$(@D) -throwback
 
   AR = $(PREFIX)libfile
   ARFLAGS =
